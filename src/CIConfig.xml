@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+
+	<!-- Bean creation -->
+	<bean id="reportService" class="com.ioc.ci.service.ReportService"></bean>
+	
+	<!-- Bean creation with constructor injection -->
+	<bean id="reportService1" class="com.ioc.ci.service.ReportService">
+		<constructor-arg value="150" />
+	</bean>
+
+	<!-- Bean creation with CI with multiple arguments in parameterized constructor -->
+	<bean id="reportService2" class="com.ioc.ci.service.ReportService">
+		<constructor-arg value="150" />
+		<constructor-arg value="300" />
+	</bean>
+	
+	<!-- Bean creation with CI for multiple arguments using name property -->
+	<bean id="reportService3" class="com.ioc.ci.service.ReportService">
+		<constructor-arg name="totalRecords" value="400" />
+		<constructor-arg name="recordsPerPage" value="200" />
+	</bean>
+	
+	<!-- Bean creation with CI for non-primitive objects using ref property -->
+	<bean id="reportService4" class="com.ioc.ci.service.ReportService">
+		<constructor-arg name="master" ref="htmlGenerator" />
+		<constructor-arg name="recordsPerPage" value="200" />
+	</bean>
+	
+	<!-- Beans for dependent objects -->
+	<bean id="htmlGenerator" class="com.ioc.ci.service.HtmlGenerator"></bean>
+	
+	<bean id="pdfGenerator" class="com.ioc.ci.service.PdfGenerator"></bean>
+</beans>
