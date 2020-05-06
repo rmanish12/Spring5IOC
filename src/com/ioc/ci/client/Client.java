@@ -16,12 +16,14 @@ public class Client {
 		ReportService reportService2 = context.getBean("reportService2", ReportService.class);
 		ReportService reportService3 = context.getBean("reportService3", ReportService.class);
 		ReportService reportService4 = context.getBean("reportService4", ReportService.class);
+		ReportService reportService5 = context.getBean("reportService5", ReportService.class);
 		
 		reportService.display();
 		reportService1.displayPage();
 		reportService2.displayTotal();
 		reportService3.displayTotal();
 		reportService4.generateReport();
+		reportService5.displayValues();
 		
 		context.close();
 	}

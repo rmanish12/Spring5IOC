@@ -1,9 +1,12 @@
 package com.ioc.ci.service;
 
+import java.util.List;
+
 public class ReportService {
 	
 	private int recordsPerPage;
 	private int totalRecords;
+	private List<String> names;
 	
 	private ReportGenerator master;
 	
@@ -29,6 +32,13 @@ public class ReportService {
 		this.recordsPerPage = recordsPerPage;
 	}
 	
+	//
+	public ReportService(int recordsPerPage, int totalRecords, List<String> names) {
+		this.recordsPerPage = recordsPerPage;
+		this.totalRecords = totalRecords;
+		this.names = names;
+	}
+	
 	public void display() {
 		System.out.println("Report generation service");
 	}
@@ -43,5 +53,12 @@ public class ReportService {
 	
 	public void generateReport() {
 		System.out.println(master.generateReport(recordsPerPage));
+	}
+	
+	public void displayValues() {
+		System.out.println("Report generation service with per page record: " + recordsPerPage + " and total records: " + totalRecords);
+		for(String s: names) {
+			System.out.println(s);
+		}
 	}
 }

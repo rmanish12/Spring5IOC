@@ -36,4 +36,16 @@
 	<bean id="htmlGenerator" class="com.ioc.ci.service.HtmlGenerator"></bean>
 	
 	<bean id="pdfGenerator" class="com.ioc.ci.service.PdfGenerator"></bean>
+	
+	<bean id="reportService5" class="com.ioc.ci.service.ReportService">
+		<constructor-arg name="recordsPerPage" value="200" />
+		<constructor-arg name="totalRecords" value="350" />
+		<constructor-arg>
+			<list>
+				<value>Steve</value>
+				<value>Smith</value>
+				<value>Kohli</value>
+			</list>
+		</constructor-arg>
+	</bean>
 </beans>
