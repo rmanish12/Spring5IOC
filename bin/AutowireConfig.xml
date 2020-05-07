@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	
+	<!-- Autowire byName -->
+<!-- 	<bean id="reportService" class="com.autowire.service.ReportService" autowire="byName">
+		<property name="recordsPerPage" value="500" />
+	</bean> -->
+
+	<!-- id should match the property name in the class -->
+	<!-- <bean id="master" class="com.autowire.service.PdfGenerator"></bean> -->
+	
+	<!-- Autowire byType -->
+<!-- 	<bean id="reportService1" class="com.autowire.service.ReportService" autowire="byType">
+		<property name="recordsPerPage" value="400"/>
+	</bean> -->
+	
+	<!-- <bean id="htmlGenerator" class="com.autowire.service.HtmlGenerator"></bean> -->
+	
+	<!-- Autowire by constructor -->
+	<bean id="reportService2" class="com.autowire.service.ReportService" autowire="constructor">
+		<constructor-arg name="recordsPerPage" value="350"/>
+	</bean>
+	
+	<bean id="pdfGenerator" class="com.autowire.service.PdfGenerator"></bean>
+</beans>
