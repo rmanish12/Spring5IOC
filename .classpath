@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="/Users/manish/Documents/JARs/spring-core-5.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/Users/manish/Documents/JARs/spring-expression-5.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/Users/manish/Documents/JARs/spring-jcl-5.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/manish/Documents/JARs/spring-aop-5.0.5.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

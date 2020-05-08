@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context.xsd" 
+>
+
+	<!-- Enable annotation based configuration -->
+	<context:annotation-config />
+
+	<bean id="reportService" class="com.annotation.service.ReportService"></bean>
+	
+	<bean id="pdfGenerator" class="com.annotation.service.PdfGenerator"></bean>
+	<bean id="htmlGenerator" class="com.annotation.service.HtmlGenerator"></bean>
+	
+	<!-- Constructor based annotation configuration -->
+<!-- 	<bean id="reportService1" class="com.annotation.service.ReportServiceConstructorAutowire">
+		<constructor-arg name="recordsPerPage" value="235" />
+	</bean> -->
+	
+	<!-- Setter method based annotation configuration -->
+<!-- 	<bean id="reportService2" class="com.annotation.service.ReportServiceSetterAutowire">
+		<property name="recordsPerPage" value="625" />
+	</bean> -->
+
+</beans>
