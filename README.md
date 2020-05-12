@@ -8,6 +8,8 @@
   - autowire: master + autowiring feature of Spring
   - bean-scope: autowire + beans scope in Spring (singleton and prototype)
   - annotation: bean-scope + annotation based configuration
+  - java-based-configuration: annotation + java based configuration
+  - aop: java-based-configuration + aop
   
 #### Beans tag for IOC
 
