@@ -47,3 +47,7 @@
 
   - spring-aop-5.0.5.RELEASE.jar
   
+##### Additional JAR required for AOP
+
+  - aspectjweaver-1.8.10.jar
+  
